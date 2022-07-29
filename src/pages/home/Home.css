@@ -1,11 +1,18 @@
-.titulo {
-    color: blue;
-    text-align: center;
+.box {
+    background-color: #3F51B5;
 }
 
-.imghome {
-    width: 500px;
-    height: 500px;
-    display: block;
-    margin: 0 auto;
+.title {
+    color: white !important;
+    font-weight: "bold" !important;
+}
+
+.button {
+    border-color: white !important;
+    background-color: #3F51B5;
+    color: white !important;
+}
+
+.posts {
+    background-color: white;
 }
