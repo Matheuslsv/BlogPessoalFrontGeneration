@@ -52,23 +52,39 @@ function CadastroTema() {
         console.log("tema " + JSON.stringify(tema))
 
         if (id !== undefined) {
-            console.log(tema)
-            put(`/temas`, tema, setTema, {
-                headers: {
-                    'Authorization': token
-                }
-            })
-            alert('Tema atualizado com sucesso');
-        } else {
-            post(`/temas`, tema, setTema, {
-                headers: {
-                    'Authorization': token
-                }
-            })
-            alert('Tema cadastrado com sucesso');
-        }
-        back()
 
+            try {
+                await put(`/temas`, tema, setTema, {
+                    headers: {
+                        'Authorization': token
+                    }
+                })
+
+                alert('Tema atualizado com sucesso');
+
+            } catch (error) {
+                console.log(`Error: ${error}`)
+                alert("Erro, por favor verifique a quantidade minima de caracteres")
+            }
+
+        } else {
+
+            try {
+                await post(`/temas`, tema, setTema, {
+                    headers: {
+                        'Authorization': token
+                    }
+                })
+
+                alert('Tema cadastrado com sucesso');
+
+            } catch (error) {
+                console.log(`Error: ${error}`)
+                alert("Erro, por favor verifique a quantidade minima de caracteres")
+            }
+        }
+
+        back()
     }
 
     function back() {
