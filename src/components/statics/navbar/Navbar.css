@@ -6,3 +6,12 @@
 .text-decoration-none {
     text-decoration: none;
 }
+
+.bgcolor {
+    color: #0652DD;
+}
+
+.space {
+    display: flex;
+    justify-content: space-between;
+}
