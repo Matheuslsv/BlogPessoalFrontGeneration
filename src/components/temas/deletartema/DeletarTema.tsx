@@ -14,7 +14,7 @@ function DeletarTema() {
     let history = useNavigate();
     const { id } = useParams<{ id: string }>();
     const token = useSelector<TokenState, TokenState["tokens"]>((state) => state.tokens);
-    const [tema, setTema] = useState<Tema>()
+    const [temas, setTema] = useState<Tema>()
 
     useEffect(() => {
         if (token == "") {
@@ -40,7 +40,7 @@ function DeletarTema() {
     }, [id])
 
     async function findById(id: string) {
-        buscaId(`/tema/${id}`, setTema, {
+        buscaId(`/temas/${id}`, setTema, {
             headers: {
                 'Authorization': token
             }
@@ -48,7 +48,7 @@ function DeletarTema() {
     }
 
     function sim() {
-        history('/temas')
+        history('/tema')
         deleteId(`/temas/${id}`, {
             headers: {
                 'Authorization': token
@@ -80,7 +80,7 @@ function DeletarTema() {
                                 Deseja deletar o Tema:
                             </Typography>
                             <Typography color="textSecondary">
-                                {tema?.descricao}
+                                {temas?.descricao}
                             </Typography>
                         </Box>
                     </CardContent>

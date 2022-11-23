@@ -1,6 +1,6 @@
 .cursor {
     cursor: pointer;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .text-decoration-none {
@@ -11,7 +11,7 @@
     color: #0652DD;
 }
 
-.space {
+.content {
     display: flex;
     justify-content: space-between;
 }

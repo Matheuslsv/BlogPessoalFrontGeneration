@@ -60,7 +60,7 @@ function CadastroTema() {
 
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
-        console.log("tema " + JSON.stringify(tema))
+        console.log("temas " + JSON.stringify(tema))
 
         if (id !== undefined) {
 
@@ -84,7 +84,7 @@ function CadastroTema() {
 
             } catch (error) {
                 console.log(`Error: ${error}`)
-                toast.error('Erro, verifique a quantiade de caracteres!', {
+                toast.error('Erro, verifique a quantidade de caracteres!', {
                     position: "top-right",
                     autoClose: 4000,
                     hideProgressBar: false,
@@ -118,7 +118,7 @@ function CadastroTema() {
 
             } catch (error) {
                 console.log(`Error: ${error}`)
-                toast.error('Erro, verifique a quantiade de caracteres!', {
+                toast.error('Erro, verifique a quantidade de caracteres!', {
                     position: "top-right",
                     autoClose: 4000,
                     hideProgressBar: false,
@@ -135,7 +135,7 @@ function CadastroTema() {
     }
 
     function back() {
-        history('/temas')
+        history('/tema')
     }
 
     return (
